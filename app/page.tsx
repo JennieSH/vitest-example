@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import Counter from "./counter";
+import Counter from "./components/Counter";
 
 export const metadata = {
-  title: "App Router",
+  title: "App Router"
 };
 
 export default function Page() {

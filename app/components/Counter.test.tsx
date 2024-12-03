@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Counter from "./counter";
+import Counter from "./Counter";
 
 test("App Router: Works with Client Components", () => {
   render(<Counter />);

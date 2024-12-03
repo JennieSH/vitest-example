@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`updateUserData(Snapshot) > loads user data as expected 1`] = `
+{
+  "email": "hello@com.tw",
+  "foods": [
+    "apple",
+    "banana",
+  ],
+  "isVip": true,
+  "name": "Jennie",
+  "verified": true,
+}
+`;
