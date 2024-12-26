@@ -26,7 +26,7 @@ const getUser = async (name: string): Promise<User | undefined> =>
 
     setTimeout(() => {
       resolve(users.find((user) => user.name === name));
-    }, 1000);
+    }, 200);
   });
 
 export const updateUserData = async (
