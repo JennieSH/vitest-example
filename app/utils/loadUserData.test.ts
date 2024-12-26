@@ -28,20 +28,21 @@ describe("updateUserData", () => {
   });
 });
 
-// describe("updateUserData(Snapshot)", () => {
-//   test("loads user data as expected", async () => {
-//     const user = await updateUserData("Jennie");
+describe("updateUserData(Snapshot)", () => {
+  test("loads user data as expected", async () => {
+    const user = await updateUserData("Jennie");
 
-//     // automatically generates a snapshot of the user object
-//     // the snapshot is saved in the __snapshots__ folder, and need to be committed to the repository
-//      expect(user).toMatchSnapshot();
+    // automatically generates a snapshot of the user object
+    // the snapshot is saved in the __snapshots__ folder, and need to be committed to the repository
+    expect(user).toMatchSnapshot();
 
-//     // expect(user).toMatchInlineSnapshot();
-//   });
-// });
+    // expect(user).toMatchInlineSnapshot();
+  });
+});
 
-// vi.mock("./updateUserData", () => ({
-//   loadUserData: () => ({
+// always return the same user data
+// vi.mock("./loadUserData", () => ({
+//   updateUserData: () => ({
 //     name: "FakeUser2",
 //     email: "hey@com.tw",
 //     foods: [],
@@ -53,7 +54,8 @@ describe("updateUserData", () => {
 //   test("loads user data as expected", async () => {
 //     const user = await updateUserData("Jennie");
 
-//     expect(user).toEqual({
+//     // always get the same mocked user data, even though updateUserData is called with "Jennie"
+//     expect(user).not.toEqual({
 //       name: "Jennie",
 //       email: "hello@com.tw",
 //       foods: ["apple", "banana"],
